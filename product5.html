@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Products</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <h1>ShopEasy Products</h1>
+    </header>
+    <nav>
+        <a href="index5.html">Home</a>
+        <a href="product5.html">Products</a>
+        <a href="cart5.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="contact5.html">Contact</a>
+        <a href="login5.html">Login</a>
+    </nav>
+    <section class="products-section">
+        <article class="product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.TjaIAzFeVZuzPRU75yyRxQHaHa&pid=Api&P=0&h=180">
+            <h3>Wireless Headphones</h3>
+            <p>High-quality wireless headphones with noise cancellation and long battery life.</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </article>
+        <article class="product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.vdg6G-Iqm44cFkNa1gxhyAHaHa&pid=Api&P=0&h=180">
+            <h3>Smart Watch</h3>
+            <p>Track your fitness, notifications, and more with this sleek smart watch.</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </article>
+        <article class="product">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.qMoMC_N3oq22MNqRZvf-1gHaEK&pid=Api&P=0&h=180">
+            <h3>Bluetooth Speaker</h3>
+            <p>Portable Bluetooth speaker delivering rich sound and deep bass.</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </article>
+        <article class="product">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.BC2H5w0p_Ya-r8xd4sRTBgHaHa&pid=Api&P=0&h=180">
+            <h3>Gaming Mouse</h3>
+            <p>Ergonomic gaming mouse with customizable buttons and RGB lighting.</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+    <script>
+        function addToCart() {
+            let count = localStorage.getItem('cartCount') || 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem('cartCount', count);
+            document.getElementById('cart-count').innerText = count;
+            alert('Item added to cart! Total items: ' + count);
+        }
+        window.onload = function() {
+            const count = localStorage.getItem('cartCount') || 0;
+            document.getElementById('cart-count').innerText = count;
+        }
+    </script>
+</body>
+</html>

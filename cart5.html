@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Cart</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <h1>ShopEasy Cart</h1>
+    </header>
+    <nav>
+        <a href="index5.html">Home</a>
+        <a href="product5.html">Products</a>
+        <a href="cart5.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="contact5.html">Contact</a>
+        <a href="login5.html">Login</a>
+    </nav>
+    <section class="cart-info">
+        <h2>Your Cart Details</h2>
+        <p id="cart-details">Loading your cart...</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            const count = localStorage.getItem('cartCount') || 0;
+            document.getElementById('cart-count').innerText = count;
+            if(count == 0) {
+                document.getElementById('cart-details').innerText = 'Your cart is empty.';
+            } else {
+                document.getElementById('cart-details').innerText = 'You have ' + count + ' item(s) in your cart.';
+            }
+        }
+    </script>
+</body>
+</html>

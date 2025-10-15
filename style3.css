@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+#quiz-container p.question-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.options button {
+  flex: 1 1 45%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  background: #ecf0f1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.options button:hover {
+  background: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.next-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.next-btn:hover {
+  background: #219150;
+}
+
+#carousel-container {
+  text-align: center;
+}
+
+#carousel {
+  border-radius: 8px;
+  max-width: 100%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.carousel-controls button {
+  background: #2980b9;
+  border: none;
+  padding: 10px 18px;
+  margin: 10px 5px 0 5px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.carousel-controls button:hover {
+  background: #1c5980;
+}
+
+#weather-container {
+  text-align: center;
+}
+
+#city {
+  padding: 12px;
+  width: 60%;
+  max-width: 300px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid #3498db;
+  outline: none;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+#city:focus {
+  border-color: #2980b9;
+}
+
+#weather-container button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#weather-container button:hover {
+  background-color: #2980b9;
+}
+
+.weather-output {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.preset-weather p {
+  margin-top: 8px;
+  font-style: italic;
+  color: #555;
+}

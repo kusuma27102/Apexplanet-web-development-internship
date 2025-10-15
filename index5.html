@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Home</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to ShopEasy</h1>
+    </header>
+    <nav>
+        <a href="index5.html">Home</a>
+        <a href="product5.html">Products</a>
+        <a href="cart5.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="contact5.html">Contact</a>
+        <a href="login5.html">Login</a>
+    </nav>
+    <section class="home-info">
+        <img src="https://hmh-ea97.kxcdn.com/wp-content/uploads/2022/09/music_and_headphones_whats_a_safe_volume_gettyimages-1324723421.jpg" class="banner-img">
+        <p>Your one-stop shop for the latest and best products. Enjoy seamless shopping with great deals and top-notch customer support.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            const count = localStorage.getItem('cartCount') || 0;
+            document.getElementById('cart-count').innerText = count;
+        }
+    </script>
+</body>
+</html>

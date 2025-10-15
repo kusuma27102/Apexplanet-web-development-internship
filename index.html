@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Learning Community</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="showSection('home')">
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">🏠 Home</a></li>
+      <li><a href="#" onclick="showSection('languages')">🗣️ Languages</a></li>
+      <li><a href="#" onclick="showSection('about')">📘 About</a></li>
+      <li><a href="#" onclick="showSection('help')">💬 Help/Support</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>🌍 Welcome to the Language Learning Community</h1>
+    <p>Explore new languages, connect with learners, and grow together!</p>
+    <div class="home-gallery">
+      <img src="apeximage1.png" alt="Learn Together">
+      <img src="apeximage2.png" alt="Practice Live">
+      <img src="apeximage3.jpg" alt="Global Languages">
+    </div>
+  </section>
+
+  <section id="languages" style="display: none;">
+    <h2>🗣️ Languages We Teach</h2>
+    <div class="language-grid">
+      <div class="language-card">
+        <img src="apeximage4.jpg" alt="English">
+        <h3>English</h3>
+        <p>English is one of the most widely spoken languages across the globe. It's the primary language for international business, technology, science, and travel. Learning English opens the door to global opportunities, lets you connect with people worldwide, and enhances your communication skills for personal and professional growth</p>
+      </div>
+      <div class="language-card">
+        <img src="apeximage5.webp" alt="French">
+        <h3>French</h3>
+        <p>French is a beautiful and romantic language spoken in over 29 countries. Known as the language of art, diplomacy, and culture, French helps you access world-class literature, cinema, and culinary arts. It’s also one of the official languages of the United Nations and a key asset for international careers.</p>
+      </div>
+      <div class="language-card">
+        <img src="apeximage6.jpg" alt="Hindi">
+        <h3>Hindi</h3>
+        <p>Hindi is the fourth most spoken language in the world and a major language in India. It is deeply connected to Indian culture, literature, cinema, and history. Learning Hindi allows you to explore India's diverse traditions, communicate with over 500 million speakers, and enjoy Bollywood movies in their original language.
+
+</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="display: none;">
+    <h2>📘 About Us</h2>
+    <img src="apeximage7.png" alt="Our Team" style="max-width: 100%;">
+    <p>
+      We are passionate about language education. Our platform supports learners 
+      with courses, community, and live interaction. Join us to unlock new opportunities!
+    </p>
+  </section>
+
+  <section id="help" style="display: none;">
+    <h2>💬 Help & Support</h2>
+    <p>If you have any issues or questions, feel free to contact our support team.</p>
+    <ul>
+      <li>Email: support@languagecommunity.com</li>
+      
+      <li>Live Chat: Available 9 AM – 6 PM</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

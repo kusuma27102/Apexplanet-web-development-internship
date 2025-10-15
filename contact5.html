@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy - Contact</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <header>
+        <h1>Contact ShopEasy</h1>
+    </header>
+    <nav>
+        <a href="index5.html">Home</a>
+        <a href="product5.html">Products</a>
+        <a href="cart5.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="contact5.html">Contact</a>
+        <a href="login5.html">Login</a>
+    </nav>
+    <section class="contact-section">
+        <h2>Get in Touch</h2>
+        
+        <p><strong>Email:</strong> info@apexplanet.in</p>
+        <p><strong>Address:</strong> shopeasy Software Pvt. Ltd., 123 Tech Park, Bangalore, India</p>
+        <h3>Business Hours</h3>
+        <p>Monday - Friday: 9 AM to 6 PM</p>
+        <p>Saturday: 10 AM to 4 PM</p>
+        <p>Sunday: Closed</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShopEasy. All rights reserved.</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            const count = localStorage.getItem('cartCount') || 0;
+            document.getElementById('cart-count').innerText = count;
+        }
+    </script>
+</body>
+</html>

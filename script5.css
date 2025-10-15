@@ -1,0 +1,50 @@
+const products = [
+  { id: 1, name: "Rose Face Serum", category: "skincare", price: 299, img: "https://via.placeholder.com/200x150?text=Serum" },
+  { id: 2, name: "Velvet Lipstick", category: "makeup", price: 499, img: "https://via.placeholder.com/200x150?text=Lipstick" },
+  { id: 3, name: "Aloe Moisturizer", category: "skincare", price: 399, img: "https://via.placeholder.com/200x150?text=Moisturizer" },
+  { id: 4, name: "Silk Blush", category: "makeup", price: 349, img: "https://via.placeholder.com/200x150?text=Blush" },
+  { id: 5, name: "Sunscreen Gel", category: "skincare", price: 199, img: "https://via.placeholder.com/200x150?text=Sunscreen" },
+  { id: 6, name: "Foundation Matte", category: "makeup", price: 599, img: "https://via.placeholder.com/200x150?text=Foundation" },
+];
+
+let cartCount = parseInt(localStorage.getItem("cart")) || 0;
+document.getElementById("cart-count").innerText = cartCount;
+
+function showSection(id) {
+  document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+function displayProducts(list) {
+  const container = document.getElementById("product-list");
+  container.innerHTML = "";
+  list.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "product";
+    card.innerHTML = `
+      <img src="${p.img}" alt="${p.name}" loading="lazy">
+      <h3>${p.name}</h3>
+      <p>₹${p.price}</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function addToCart() {
+  cartCount++;
+  localStorage.setItem("cart", cartCount);
+  document.getElementById("cart-count").innerText = cartCount;
+}
+
+function filterProducts(category) {
+  const filtered = category === "all" ? products : products.filter(p => p.category === category);
+  displayProducts(filtered);
+}
+
+function sortProducts(order) {
+  const sorted = [...products].sort((a, b) => order === "low" ? a.price - b.price : b.price - a.price);
+  displayProducts(sorted);
+}
+
+displayProducts(products);
